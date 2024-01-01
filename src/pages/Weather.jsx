@@ -1,5 +1,3 @@
-// Weather.jsx
-
 import React from "react";
 import CurrentWeather from "../components/Weather/CurrentWeather";
 import Search from "../components/Search/Search";
