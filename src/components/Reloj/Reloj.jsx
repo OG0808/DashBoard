@@ -4,6 +4,7 @@ import useDarkmode from "../../store/useDarkmode";
 
 import useStoreNmaeCity from "../../store/useStoreNmaeCity";
 import { useHora } from "../../utils/Hora";
+import Loader from "../Loader/Loader";
 import "../Reloj/Reloj.css";
 
 const Reloj = () => {
@@ -18,7 +19,7 @@ const Reloj = () => {
   const { hora } = useHora(ciudad);
   const{darkMode}=useDarkmode()
   if (hora === undefined) {
-    return <p>cargando...</p>;
+    return <Loader/>;
   }
 
   return (
