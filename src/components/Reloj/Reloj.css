@@ -1,0 +1,30 @@
+.reloj__container {
+  width: 510px;
+  height: 330px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reloj__container > h2 {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reloj__container > p {
+  color: #292929;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

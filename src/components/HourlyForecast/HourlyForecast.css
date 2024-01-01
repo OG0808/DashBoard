@@ -1,0 +1,66 @@
+/* hourly-forecast.css */
+
+.hourly-forecast {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 870px;
+  height: 366px;
+  flex-shrink: 0;
+  border-radius: 30px;
+background: #D9D9D9;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hourly-forecast__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hourly-forecast__time {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #292929;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  
+}
+
+.hourly-forecast__icon {
+  width: 40px;
+  height: 40px;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.hourly-forecast__temperature {
+  font-size: 16px;
+  color: #292929;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.hourly-forecast__wind-icon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.hourly-forecast__wind-speed {
+  font-size: 12px;
+  color: #292929;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}

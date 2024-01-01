@@ -1,0 +1,44 @@
+.weather {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+ 
+  padding: 1rem;
+  margin: 3rem auto;
+}
+
+.weather__content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+}
+
+.weather__current-info {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+ 
+}
+
+.wetaher__forescat-info {
+  justify-content: center;
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  
+}
