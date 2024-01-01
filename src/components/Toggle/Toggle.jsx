@@ -1,12 +1,12 @@
-
-import "../Toggle/Toggle.css"
+import useDarkmode from "../../store/useDarkmode";
+import "../Toggle/Toggle.css";
 
 const Toggle = () => {
-
+  const { setDarkmode} = useDarkmode();
 
   return (
-    <label className="theme-switch">
-      <input type="checkbox" className="theme-switch__checkbox" />
+    <label   className="theme-switch">
+      <input onClick={setDarkmode} type="checkbox" className="theme-switch__checkbox" />
       <div className="theme-switch__container">
         <div className="theme-switch__clouds"></div>
         <div className="theme-switch__stars-container">

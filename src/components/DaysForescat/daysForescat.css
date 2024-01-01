@@ -5,13 +5,14 @@
   height: 366px;
   flex-shrink: 0;
   border-radius: 30px;
-  background: #d9d9d9;
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
 }
 
 .daysforescat__card {
@@ -19,8 +20,8 @@
   margin: 5px;
   display: flex;
   flex-direction: column;
-  background: #d9d9d9;
-  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+  background: var(--bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   width: 180px;
   height: 170px;
@@ -45,7 +46,7 @@
 .daysforescat__description {
   display: block;
   margin-top: 5px;
-  color: #292929;
+
   font-family: Poppins;
   font-style: normal;
   font-weight: 700;

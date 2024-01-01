@@ -4,7 +4,7 @@ import Weather from "./pages/Weather";
 
 function App() {
   return (
-    <div>
+    <div className="main__container">
       <Routes>
         <Route path="/" element={<Weather />} />
       </Routes>

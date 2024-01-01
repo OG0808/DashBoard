@@ -1,5 +1,6 @@
 import { useCurrenPosition } from "../../hooks/useCurrentposition";
 import { useFetchCity } from "../../hooks/useFetchCity";
+import useDarkmode from "../../store/useDarkmode";
 
 import useStoreNmaeCity from "../../store/useStoreNmaeCity";
 import { useHora } from "../../utils/Hora";
@@ -15,13 +16,13 @@ const Reloj = () => {
   let ciudad = cityAndTz?._links["city:timezone"].name;
   let countrie = cityAndTz?._links["city:country"].name;
   const { hora } = useHora(ciudad);
-
+  const{darkMode}=useDarkmode()
   if (hora === undefined) {
     return <p>cargando...</p>;
   }
 
   return (
-    <div className="reloj__container">
+    <div data-theme={darkMode?"dark":"light"} className="reloj__container">
       <p>
         {cityAndTz.name}, {countrie}
       </p>

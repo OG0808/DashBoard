@@ -3,7 +3,12 @@ import useStorecityLatLon from "../../store/useStoreTimeZone";
 import { useFetchWeather } from "../../hooks/useFetchWeather";
 import { formatSunriseTime } from "../../utils/formatSunriseTime";
 import "./CurrentWeather.css";
+import useDarkmode from "../../store/useDarkmode";
+
+
+
 const CurrentWeather = () => {
+
 
 
 
@@ -24,9 +29,13 @@ const CurrentWeather = () => {
   const presion = weatherData?.main.pressure;
   const viento = weatherData?.wind.speed;
   const nubes = weatherData?.clouds.all;
+  const { darkMode } = useDarkmode();
+
+
+
 
   return (
-    <div className="current-weather">
+    <div data-theme={darkMode ? "dark" : "light"} className="current-weather">
       <section className="current-weather__temperature">
         <div>
           <h1 className="current-weather__temperature-value">
@@ -56,7 +65,7 @@ const CurrentWeather = () => {
       <section className="current-weather__description">
         <img
           className="current-weather__description-icon"
-          src={`/${icono}.${'svg'}`}
+          src={`/${icono}.${"svg"}`}
           alt=""
         />
         <span className="current-weather__description-text">{descripcion}</span>

@@ -6,7 +6,7 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  
+ 
 }
 
 .search__form {
@@ -24,6 +24,7 @@
   gap: 10px;
  
   color: rgba(255, 255, 255, 0.8);
+  background: var(--bg);
 }
 
 .search__form > button{
@@ -92,4 +93,8 @@
 .search__current__location:active{
   color: rgba(255, 255, 255, 0.8);
   background: #4cbb17;
+}
+
+.search__icon{
+  color: var(--text-color);
 }

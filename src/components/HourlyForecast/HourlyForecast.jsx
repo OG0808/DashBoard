@@ -1,5 +1,6 @@
 
 import useHourlyForecast from "../../hooks/useHourlyForecast";
+import useDarkmode from "../../store/useDarkmode";
 import useStorecityLatLon from "../../store/useStoreTimeZone";
 import "./HourlyForecast.css";
 
@@ -13,11 +14,11 @@ const HourlyForecast = () => {
   const lon = cityLatLon?.location?.latlon.longitude;
   const { hourlyForescat } = useHourlyForecast(lat, lon);
   const hourlyWeather = hourlyForescat?.list.slice(0, 5)
-  
+  const{darkMode}=useDarkmode()
 
  
   return (
-<div className="hourly-forecast">
+<div data-theme={darkMode?"dark":"light"} className="hourly-forecast">
       {hourlyWeather?.map((data, index) => {
         const dt = new Date(data.dt_txt + "Z");
         const hour = `${dt.toString(Date()).split(" ")[4].split(":")[0]}hs`;

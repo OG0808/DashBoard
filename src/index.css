@@ -1,5 +1,27 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --bg-green: #4cbb17;
+  --text-color: #66778e;
+  --bg--main: #d7d7dc;
+}
+
+[data-theme="dark"] {
+  transition: 0.2s;
+  --bg: #202c36;
+  --text-color: #66778e;
+  --bg--main: #66778e;
+}
+
+[data-theme="light"] {
+    transition: 0.2s;
+  --bg: #ffffff;
+  --bg-green: #4cbb17;
+  --text-color: #66778e;
+  --bg--main: #d7d7dc;
 }

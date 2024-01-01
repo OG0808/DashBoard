@@ -29,8 +29,8 @@ const Search = () => {
     <div className="search__container">
       <Toggle />
       <form className="search__form" onSubmit={handleSubmit(onSubmit)}>
-        <i className="bx bx-search-alt bx-md"></i>
-        <input
+        <i className="bx bx-search-alt bx-md search__icon"></i>
+        <input 
           className="search__search"
           {...register("nameCityes")}
           type="text"

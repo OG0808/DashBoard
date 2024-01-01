@@ -1,5 +1,6 @@
 
 import useDaysForescat from "../../hooks/useDaysForescat";
+import useDarkmode from "../../store/useDarkmode";
 import useStorecityLatLon from "../../store/useStoreTimeZone";
 import "./daysForescat.css"
 
@@ -9,10 +10,10 @@ const DaysForescat = () => {
   const lat = cityLatLon?.location?.latlon.latitude;
   const lon = cityLatLon?.location?.latlon.longitude;
   const { weatherData } = useDaysForescat(lat, lon);
-  
+  const{darkMode}=useDarkmode()
   
   return (
-    <div className="daysforescat">
+    <div data-theme={darkMode?"dark":"light"} className="daysforescat">
     {weatherData?.map((data) => (
       <div key={data.date} className="daysforescat__card">
         <img src={`/${data.topIcon}.${'svg'}`} alt="" className="daysforescat__icon" />

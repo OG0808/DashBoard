@@ -5,10 +5,13 @@ import Reloj from "../components/Reloj/Reloj";
 import "./weather.css";
 import DaysForescat from "../components/DaysForescat/DaysForescat";
 import HourlyForecast from "../components/HourlyForecast/HourlyForecast";
+import useDarkmode from "../store/useDarkmode";
 
 const Weather = () => {
+
+ const{darkMode}= useDarkmode()
   return (
-    <div className="weather">
+    <div  data-theme={darkMode?"dark":"light"}  className="weather">
       <Search />
       <div className="weather__content">
         <div className="weather__current-info">
