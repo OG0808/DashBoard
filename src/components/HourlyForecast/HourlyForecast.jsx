@@ -1,7 +1,7 @@
 
 import useHourlyForecast from "../../hooks/useHourlyForecast";
 import useStorecityLatLon from "../../store/useStoreTimeZone";
-import "./hourlyForecast.css";
+import "./HourlyForecast.css";
 
 
 
