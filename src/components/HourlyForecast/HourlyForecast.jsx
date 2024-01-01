@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+
 import useHourlyForecast from "../../hooks/useHourlyForecast";
 import useStorecityLatLon from "../../store/useStoreTimeZone";
 
-import "./Hourlyforecast.css";
-import axios from "axios";
+import "./hourlyforecast.css";
+
 
 
 const HourlyForecast = () => {

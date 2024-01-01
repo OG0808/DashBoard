@@ -4,7 +4,7 @@ import Search from "../components/Search/Search";
 import Reloj from "../components/Reloj/Reloj";
 import "./weather.css";
 import DaysForescat from "../components/DaysForescat/DaysForescat";
-import HourlyForecast from "../components/HourlyForecast/HourlyForecast";
+import HourlyForecast from "../components/HourlyForecast/hourlyForecast";
 
 const Weather = () => {
   return (
