@@ -1,4 +1,4 @@
-import React from "react";
+
 import useDaysForescat from "../../hooks/useDaysForescat";
 import useStorecityLatLon from "../../store/useStoreTimeZone";
 import "./daysForescat.css"

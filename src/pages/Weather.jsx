@@ -3,7 +3,7 @@ import CurrentWeather from "../components/Weather/CurrentWeather";
 import Search from "../components/Search/Search";
 import Reloj from "../components/Reloj/Reloj";
 import "./weather.css";
-import DaysForescat from "../components/DaysForescat/daysForescat";
+import DaysForescat from "../components/DaysForescat/DaysForescat";
 import HourlyForecast from "../components/HourlyForecast/HourlyForecast";
 
 const Weather = () => {
