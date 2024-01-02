@@ -1,5 +1,5 @@
 import useDarkmode from "../../store/useDarkmode";
-import "../Toggle/Toggle.css";
+import "./Toggle.css";
 
 const Toggle = () => {
   const { setDarkmode} = useDarkmode();

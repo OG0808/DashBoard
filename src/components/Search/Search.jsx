@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useStoreNmaeCity from "../../store/useStoreNmaeCity";
-import "../Search/Search.css";
+import "./Search.css";
 import Toggle from "../Toggle/Toggle";
 import usePosition from "../../store/usePosition";
 import { useCurrenPosition } from "../../hooks/useCurrentposition";

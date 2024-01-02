@@ -1,11 +1,11 @@
 import React from "react";
-import CurrentWeather from "../components/Weather/CurrentWeather";
-import Search from "../components/Search/Search";
-import Reloj from "../components/Reloj/Reloj";
+import CurrentWeather from "../../components/Weather/CurrentWeather";
+import Search from "../../components/Search/Search";
+import Reloj from "../../components/Reloj/Reloj";
 import "./weather.css";
-import DaysForescat from "../components/DaysForescat/DaysForescat";
-import HourlyForecast from "../components/HourlyForecast/HourlyForecast";
-import useDarkmode from "../store/useDarkmode";
+import DaysForescat from "../../components/DaysForescat/DaysForescat";
+import HourlyForecast from "../../components/HourlyForecast/HourlyForecast";
+import useDarkmode from "../../store/useDarkmode";
 
 const Weather = () => {
 

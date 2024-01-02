@@ -5,7 +5,7 @@ import useDarkmode from "../../store/useDarkmode";
 import useStoreNmaeCity from "../../store/useStoreNmaeCity";
 import { useHora } from "../../utils/Hora";
 import Loader from "../Loader/Loader";
-import "../Reloj/Reloj.css";
+import "./Reloj.css";
 
 const Reloj = () => {
   const { currentposition } = useCurrenPosition();
