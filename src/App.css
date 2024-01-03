@@ -1,10 +1,9 @@
 .main__container {
- 
   display: flex;
   align-items: center;
   max-width: 1660px;
   width: 100%;
-  
+  position: relative;
   margin: 0 auto;
 }
 
@@ -13,4 +12,35 @@
   flex-direction: column;
   min-height: 850px;
   gap: 1rem;
+  margin: 0.5rem;
+  
+}
+@media (max-width: 1440px) {
+  .main__container-toggles {
+    min-height: 1170px;
+    gap: 1rem;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__container-toggles {
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 130px;
+    left: -250px;
+    gap: 1rem;
+  }
+
+  .main__container-togglesBlok{
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 130px;
+    left: 16px;
+    gap: 1rem;
+  }
 }

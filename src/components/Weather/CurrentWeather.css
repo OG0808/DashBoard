@@ -13,6 +13,14 @@
  
 }
 
+@media (max-width:1440px){
+  .current-weather{
+    display: flex;
+flex-wrap: wrap;
+width: 600px;
+  }
+}
+
 /* @media (max-width:780px){
   
   .current-weather{
@@ -26,10 +34,11 @@
 
 .current-weather__temperature {
   height: 100%;
-
   width: 304px;
   display: flex;
   flex-direction: column;
+  
+  height: 330px;
 }
 
 .current-weather__temperature-value {
@@ -67,6 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .current-weather__details-icons {
@@ -103,6 +113,8 @@
   align-items: center;
   justify-content: center;
   margin-top: -30px;
+ 
+  height: 330px;
 }
 
 .current-weather__description-icon {
@@ -141,6 +153,7 @@
   width: 300px;
   justify-content: center;
 
+height: 330px;
   
 }
 

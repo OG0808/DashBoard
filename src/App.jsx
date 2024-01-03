@@ -8,22 +8,22 @@ import Toggle from "./components/Toggle/Toggle";
 import { useEffect } from "react";
 
 function App() {
+  const { openMenu } = useDarkmode();
+  console.log(openMenu);
   useEffect(() => {
-    alert("Aun no es resposive 🙂🙂🙂🙂🙂")
-    
-  }, [])
-  
-  const {darkMode}=useDarkmode()
+    alert("Aun no es resposive 🙂🙂🙂🙂🙂");
+  }, []);
+
+  const { darkMode } = useDarkmode();
   return (
-    <div data-theme={darkMode?"dark":"light"}  className="main__container">
-    <div className="main__container-toggles">
-    <Toggle/>
-      <RutasToggle/>
-    </div>
-     
+    <div data-theme={darkMode ? "dark" : "light"} className="main__container">
+      <div className={openMenu ?"main__container-togglesBlok" : "main__container-toggles"}>
+        <Toggle />
+        <RutasToggle />
+      </div>
       <Routes>
         <Route path="/" element={<Weather />} />
-        <Route path="/maps" element={<Maps/>}/>
+        <Route path="/maps" element={<Maps />} />
       </Routes>
     </div>
   );

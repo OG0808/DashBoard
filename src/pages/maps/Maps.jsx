@@ -12,14 +12,14 @@ import Layers from "../../components/LayersMaps/Layers";
 import useLayers from "../../store/useLayers";
 import useDarkmode from "../../store/useDarkmode";
 import Icon from "../../../public/Marker.png"
-
+import Menu from "../../components/Menu/Menu"
 const Maps = () => {
 
   const myIcon = L.icon({
     iconUrl: Icon,
-    iconSize: [38, 60], // tamaño del icono
-    iconAnchor: [20, 50], // punto del icono que corresponderá a la ubicación del marcador
-    popupAnchor: [-10, -6] // punto relativo a iconAnchor donde se abrirá el popup
+    iconSize: [38, 60], 
+    iconAnchor: [20, 50], 
+    popupAnchor: [-10, -6] 
 });
   const { darkMode } = useDarkmode();
   const { layer } = useLayers();
@@ -50,6 +50,10 @@ const Maps = () => {
       data-theme={darkMode ? "dark" : "light"}
       className="main__container__map"
     >
+      <div className="main__container__map-menu">
+
+      <Menu/>
+      </div>
       <Layers />
       <MapContainer center={positionn} zoom={2} scrollWheelZoom={true}>
         <TileLayer
