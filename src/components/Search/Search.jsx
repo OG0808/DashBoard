@@ -45,7 +45,7 @@ const Search = () => {
       </span>
         <button onClick={setPosition} className="search__current__location">
           <i className="bx bx-target-lock bx-md"></i>
-          Current Location
+          Ubicacion Actual
         </button>
       </div>
 
