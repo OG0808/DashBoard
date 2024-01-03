@@ -9,10 +9,7 @@ import { useEffect } from "react";
 
 function App() {
   const { openMenu } = useDarkmode();
-  console.log(openMenu);
-  useEffect(() => {
-    alert("Aun no es resposive 🙂🙂🙂🙂🙂");
-  }, []);
+
 
   const { darkMode } = useDarkmode();
   return (
