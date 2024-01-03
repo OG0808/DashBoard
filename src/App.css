@@ -1,0 +1,16 @@
+.main__container {
+ 
+  display: flex;
+  align-items: center;
+  max-width: 1660px;
+  width: 100%;
+  
+  margin: 0 auto;
+}
+
+.main__container-toggles {
+  display: flex;
+  flex-direction: column;
+  min-height: 850px;
+  gap: 1rem;
+}

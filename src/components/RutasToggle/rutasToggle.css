@@ -1,0 +1,39 @@
+.rutas-toggle{
+  width: 180px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--text-color);
+  gap: 15px;
+  padding: 15px;
+}
+
+.rutas-toggle__item{
+  
+  width: 150px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  padding: 15px;
+  border: none;
+  flex-shrink: 0;
+  color: var(--text-color);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffffcc;
+}

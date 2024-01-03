@@ -12,22 +12,20 @@ const Search = () => {
   const { reset, register, handleSubmit } = useForm();
   const { position } = usePosition();
   const { currentposition } = useCurrenPosition();
-  
+
   const onSubmit = (data) => {
-    
     setText(data?.nameCityes);
     reset();
   };
   
   useEffect(() => {
-    
     setText(currentposition?.name);
   }, [position])
   
 
   return (
     <div className="search__container">
-      <Toggle />
+     
       <form className="search__form" onSubmit={handleSubmit(onSubmit)}>
         <i className="bx bx-search-alt bx-md search__icon"></i>
         <input 

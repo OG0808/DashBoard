@@ -1,10 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import useStoreNmaeCity from "../store/useStoreNmaeCity";
 
 export const useCurrenPosition = () => {
   const [currentposition, setCurrentposition] = useState();
-  const { text } = useStoreNmaeCity();
+
   useEffect(() => {
     function success(pos) {
       const obj = {
@@ -24,10 +23,8 @@ export const useCurrenPosition = () => {
         .then((error) => console.log(error));
     }
     navigator.geolocation.getCurrentPosition(success);
-
-    
   }, []);
- 
+
   return {
     currentposition,
   };

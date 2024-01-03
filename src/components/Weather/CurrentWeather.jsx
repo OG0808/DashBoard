@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import useStorecityLatLon from "../../store/useStoreTimeZone";
 import { useFetchWeather } from "../../hooks/useFetchWeather";
 import { formatSunriseTime } from "../../utils/formatSunriseTime";
