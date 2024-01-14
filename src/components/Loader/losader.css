@@ -1,6 +1,10 @@
 .wrapper {
-  height: 200px;
-  margin: 3rem auto;
+  width: 510px;
+  height: 330px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 .cloud {
