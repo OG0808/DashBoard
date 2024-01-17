@@ -13,10 +13,11 @@ const CurrentWeather = () => {
 
 
   const { cityLatLon } = useStorecityLatLon();
-  const lat = cityLatLon?.location?.latlon.latitude;
-  const lon = cityLatLon?.location?.latlon.longitude;
-  const { weatherData } = useFetchWeather(lat, lon);
 
+  const lat = cityLatLon?.coord?.lat;
+  const lon = cityLatLon?.coord?.lon;
+  const { weatherData } = useFetchWeather(lat, lon);
+  
   const grade = weatherData?.main?.temp - 273.15;
   const feels_like = weatherData?.main.feels_like - 273.15;
   const sunrise = weatherData?.sys?.sunrise;

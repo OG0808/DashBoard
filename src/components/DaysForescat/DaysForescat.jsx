@@ -7,8 +7,8 @@ import "./daysForescat.css"
 
 const DaysForescat = () => {
   const { cityLatLon } = useStorecityLatLon();
-  const lat = cityLatLon?.location?.latlon.latitude;
-  const lon = cityLatLon?.location?.latlon.longitude;
+  const lat = cityLatLon?.coord?.lat;
+  const lon = cityLatLon?.coord?.lon;
   const { weatherData } = useDaysForescat(lat, lon);
   const{darkMode}=useDarkmode()
   

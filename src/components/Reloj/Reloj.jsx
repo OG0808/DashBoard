@@ -13,10 +13,9 @@ const Reloj = () => {
   const currentCity = currentposition?.name;
   const { text } = useStoreNmaeCity();
   const cityname = text || currentCity;
-  const { cityAndTz } = useFetchCity(cityname);
-  let ciudad = cityAndTz?._links["city:timezone"].name;
-  let countrie = cityAndTz?._links["city:country"].name;
-  const { hora } = useHora(ciudad);
+  const { cityAndTz, timezone } = useFetchCity(cityname);
+  let countrie = cityAndTz?.sys?.country;
+  const { hora } = useHora(timezone?.timezone_location);
   const { darkMode } = useDarkmode();
   if (hora === undefined) {
     return <Loader />;
@@ -25,7 +24,7 @@ const Reloj = () => {
   return (
     <div data-theme={darkMode ? "dark" : "light"} className="reloj__container">
       <p>
-        {cityAndTz.name}, {countrie}
+        {cityAndTz?.name}, {countrie}
       </p>
       <h2>{hora?.format("LT")}</h2>
     </div>

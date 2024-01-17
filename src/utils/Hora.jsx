@@ -1,6 +1,6 @@
 import moment from "moment-timezone";
 import { useEffect, useState } from "react";
-
+import 'moment-timezone/data/packed/latest.json'; 
 export const useHora = (ciudad) => {
   const [hora, setHora] = useState(moment().tz(ciudad));
 

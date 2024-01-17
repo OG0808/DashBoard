@@ -10,8 +10,8 @@ const HourlyForecast = () => {
 
 
   const { cityLatLon } = useStorecityLatLon();
-  const lat = cityLatLon?.location?.latlon.latitude;
-  const lon = cityLatLon?.location?.latlon.longitude;
+  const lat = cityLatLon?.coord?.lat;
+  const lon = cityLatLon?.coord?.lon;
   const { hourlyForescat } = useHourlyForecast(lat, lon);
   const hourlyWeather = hourlyForescat?.list.slice(0, 5)
   const{darkMode}=useDarkmode()

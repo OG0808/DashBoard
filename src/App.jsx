@@ -5,7 +5,6 @@ import Maps from "./pages/maps/Maps";
 import RutasToggle from "./components/RutasToggle/RutasToggle";
 import useDarkmode from "./store/useDarkmode";
 import Toggle from "./components/Toggle/Toggle";
-import { useEffect } from "react";
 
 function App() {
   const { openMenu } = useDarkmode();

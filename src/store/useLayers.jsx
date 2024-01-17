@@ -1,4 +1,4 @@
-import create from "zustand";
+import {create} from "zustand";
 
 // Definir la tienda
 const useLayers = create((set) => ({

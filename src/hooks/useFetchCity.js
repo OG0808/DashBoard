@@ -5,44 +5,42 @@ import useStorecityLatLon from "../store/useStoreTimeZone";
 export const useFetchCity = (cityname) => {
   const { setcityLatLon } = useStorecityLatLon();
   const [cityNameData, setCityNameData] = useState();
+  const [timezone, setTimezone] = useState()
   const [cityAndTz, setCityAndTz] = useState();
-  const cityNameUrl = `https://api.teleport.org/api/cities/?search=${cityname}&limit=1`;
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+  const apiKey2 = import.meta.env.VITE_TIMEZONE_API_KEY
+  const cityNameUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${apiKey}`;
+  const timezoneinfo =`https://timezone.abstractapi.com/v1/current_time/?api_key=${apiKey2}=${cityname}`
   useEffect(() => {
     axios
       .get(cityNameUrl)
-      .then((response) => {
-        setCityNameData(response.data);
-
-        const cityAndTZ =
-          response.data?._embedded["city:search-results"][0]?.["_links"]?.[
-            "city:item"
-          ];
-
-        if (cityAndTZ) {
-          axios
-            .get(cityAndTZ.href)
-            .then((secondResponse) => {
-              setCityAndTz(secondResponse.data);
-            })
-            .catch((secondError) => {
-              console.error(
-                "Error fetching city and timezone data:",
-                secondError
-              );
-            });
-        }
+      .then((res) => {
+        setCityNameData(res.data);
+        const cityAndTZ = res.data
+        setCityAndTz(cityAndTZ);
       })
       .catch((error) => {
-        console.error("Error fetching city data:", error);
+        console.error(error);
       });
-  }, [cityname]);
+  }, [cityname])
 
-  //              <==  Efecto que envia la latitud y longitud
-  //      al componente CurrentWeather para obtener los datos del clima ==>
-;
+  useEffect(() => {
+    if (cityname) {
+      
+    axios
+    .get(timezoneinfo)
+    .then((res)=>{
+      setTimezone(res.data)
+    })
+    .catch(err=>console.log(err))
+  }else{
+    ''
+  }
+  }, [cityname])
+  
   useEffect(() => {
     setcityLatLon(cityAndTz);
   }, [cityAndTz]);
 
-  return { cityNameData, cityAndTz };
+  return { cityNameData, cityAndTz, timezone };
 };
